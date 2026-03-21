@@ -1,0 +1,50 @@
+body {
+  background-color: aquamarine;
+}
+#glavni-naslov {
+  background-color: blanchedalmond;
+  color: blueviolet;
+  margin: 15px;
+  padding: 20px;
+}
+nav {
+  background-color: darkseagreen;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+ol {
+  font-style: italic;
+}
+a:hover {
+  color: crimson;
+}
+.dodatniLink {
+  color: orange;
+}
+article {
+  margin: 2.5em;
+}
+.vsebinaClanka {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+time {
+  font-style: italic;
+}
+figure > img {
+  width: 15em;
+}
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+}
+#odebeljeno {
+  font-weight: bold;
+}
+#glavna-noga {
+  margin-top: 40px;
+  background-color: black;
+  color: cadetblue;
+  padding: 20px;
+}

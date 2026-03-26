@@ -23,17 +23,17 @@
       /><br /><br />
 
       <label for="opis">Kratek opis*:</label><br />
-      <textarea id="opis" name="opis" rows="6" cols="50"></textarea><br /><br />
+      <textarea id="opis" name="opis" rows="6" cols="50" required></textarea
+      ><br /><br />
 
-      <!-- SPREMENI -->
       <label for="tip">Tip filma*:</label>
-      <select id="tip" name="tip">
+      <select id="tip" name="tip" required>
         <option value="">--Izberi tip--</option>
-        <option value="akcija">Akcija</option>
-        <option value="komedija">Komedija</option>
-        <option value="drama">Drama</option>
+        <option value="grozljivka">Grozljivka</option>
+        <option value="slasher">Slasher</option>
         <option value="triler">Triler</option>
-        <option value="animacija">Animacija</option></select
+        <option value="psihološkiTriler">Psihološki triler</option>
+        <option value="scifi-grozljivka">SciFi grozljivka</option></select
       ><br /><br />
 
       <label for="datum">Datum izida:</label>
@@ -45,16 +45,16 @@
         max="2010-05-01"
       /><br /><br />
 
-      <label for="igralec">Glavni igralec/igralka</label>
+      <label for="igralec">Glavni igralec/igralka:</label>
       <input type="text" id="igralec" name="igralec" size="30" list="igralci" />
       <datalist id="igralci">
-        <option value="Leonardo DiCaprio"></option>
-        <option value="Meryl Streep"></option>
-        <option value="Tom Hanks"></option>
-        <option value="Scarlett Johansson"></option>
-        <option value="Brad Pitt"></option>
-        <option value="Cate Blanchett"></option>
-        <option value="Denzel Washington"></option></datalist
+        <option value="Tony Todd"></option>
+        <option value="Rebecca Hall"></option>
+        <option value="Brad Dourif"></option>
+        <option value="Anthony Hopkins"></option>
+        <option value="Kyle Gallner"></option>
+        <option value="Sarah Paulson"></option>
+        <option value="Jake Gyllenhaal"></option></datalist
       ><br /><br />
 
       <label for="trajanje">Trajanje filma:</label>
@@ -63,7 +63,7 @@
         id="trajanje"
         name="trajanje"
         min="20"
-        max="100"
+        max="150"
         value="60"
         step="20"
       /><br /><br />
@@ -78,7 +78,7 @@
     <br />
 
     <fieldset>
-      <legend>Nagrada Zlatni globus</legend>
+      <legend>Filmske nagrade za grozljivke</legend>
 
       <label for="nominacije">Število nominacij:</label><br />
       <input
@@ -89,35 +89,65 @@
         max="20"
       /><br /><br />
 
-      <label>Dobljene nagrade Zlatni globus za:</label><br />
-      <input type="checkbox" id="drama" name="nagrade" value="drama" />
-      <label for="drama">najboljši dramski film</label><br />
-      <input type="checkbox" id="reziser" name="nagrade" value="reziser" />
-      <label for="reziser">najboljši filmski režiser</label><br />
-      <input type="checkbox" id="glasba" name="nagrade" value="glasba" />
-      <label for="glasba">najboljšo filmsko glasbo</label><br />
-      <input type="checkbox" id="scenarij" name="nagrade" value="scenarij" />
-      <label for="scenarij">najboljši filmski scenarij</label><br />
+      <label>Prejete nagrade za:</label><br />
+      <input
+        type="checkbox"
+        id="najboljsa_grozljivka"
+        name="nagrade"
+        value="najboljsa_grozljivka"
+      />
+      <label for="najboljsa_grozljivka">najboljša grozljivka / thriller</label
+      ><br />
+
+      <input
+        type="checkbox"
+        id="najboljsi_zlobnez"
+        name="nagrade"
+        value="najboljsi_zlobnez"
+      />
+      <label for="najboljsi_zlobnez">najboljši filmski zlobnež / morilec</label
+      ><br />
+
+      <input
+        type="checkbox"
+        id="najboljsi_twist"
+        name="nagrade"
+        value="najboljsi_twist"
+      />
+      <label for="najboljsi_twist">najboljši preobrat zgodbe</label><br />
+
+      <input
+        type="checkbox"
+        id="najboljsi_scream"
+        name="nagrade"
+        value="najboljsi_scream"
+      />
+      <label for="najboljsi_scream">najboljša scream queen / king</label><br />
+
+      <input
+        type="checkbox"
+        id="najboljsi_specialni_efekti"
+        name="nagrade"
+        value="najboljsi_specialni_efekti"
+      />
+      <label for="najboljsi_specialni_efekti"
+        >najboljši specialni / vizualni efekti</label
+      ><br />
     </fieldset>
 
-    <br />
-    <input type="submit" value="Pošlji" />
-    <input type="reset" value="Ponastavi" />
-
     <h2>Send e-mail to someone@example.com:</h2>
-    <form
-      action="mailto:pia.pecovnik@student.um.si"
-      method="post"
-      enctype="text/plain"
-    >
+    <p>
+      <em>Nakazovanje pošiljanja.</em>
+    </p>
+    <form>
       Name:<br />
       <input type="text" name="name" /><br />
       E-mail:<br />
       <input type="text" name="mail" /><br />
       Comment:<br />
       <input type="text" name="comment" size="50" /><br /><br />
-      <input type="submit" value="Send" />
-      <input type="reset" value="Reset" />
+      <input type="submit" value="Pošlji" />
+      <input type="reset" value="Ponastavi" />
     </form>
   </body>
 </html>

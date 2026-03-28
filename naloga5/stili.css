@@ -1,3 +1,43 @@
+ol {
+  font-style: italic;
+}
+
+a {
+  color: aquamarine;
+}
+a:hover {
+  color: crimson;
+}
+
+article {
+  margin: 2.5em;
+}
+.vsebinaClanka {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+time {
+  font-style: italic;
+}
+figure > img {
+  width: 15em;
+}
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+}
+#odebeljeno {
+  font-weight: bold;
+}
+#glavna-noga {
+  margin-top: 40px;
+  background-color: black;
+  color: cadetblue;
+  padding: 20px;
+}
+
+/* novi stili */
+
 .container {
   display: grid;
   grid-template-rows: repeat(3, auto);
@@ -21,10 +61,140 @@ main {
 aside {
   grid-column-start: 5;
   grid-row-start: 2;
+  background-color: aquamarine;
+  padding-top: 5%;
+  padding-left: 3%;
 }
 
 footer {
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 3;
+}
+
+.container {
+  background-color: blanchedalmond;
+}
+
+#glavni-naslov {
+  background-color: aquamarine;
+  color: darkcyan;
+  margin: 15px;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+#Navigacija {
+  background-color: darksalmon;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section article:nth-child(2) {
+  background-color: lightblue;
+  padding: 15px;
+}
+
+section article:nth-child(n + 3) {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  padding: 15px;
+}
+
+section header ::first-letter {
+  font-size: 50px;
+  font-weight: bold;
+  color: darksalmon;
+}
+section header {
+  color: darksalmon;
+  background-color: beige;
+}
+
+article .vsebina > p:nth-of-type(2)::first-line {
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  border-bottom: dotted;
+  border-bottom-color: black;
+}
+
+footer a:hover {
+  border-bottom: none;
+}
+
+form {
+  font-size: 110%;
+  font-family: Arial, sans-serif;
+  margin-left: -25px;
+  margin-right: 10px;
+}
+
+fieldset [required] {
+  background-color: aquamarine;
+}
+
+#naslov {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+fieldset p::after {
+  content: "Privzeti naslov lahko vsebuje samo črke in presledke!";
+  font-size: medium;
+  font-style: italic;
+  color: red;
+}
+
+aside {
+  margin-right: 40px;
+}
+table {
+  list-style-type: none;
+}
+
+tr:nth-child(odd) {
+  background-color: blanchedalmond;
+  color: darkcyan;
+}
+
+table tr:nth-child(odd) a {
+  color: cadetblue;
+}
+table tr:nth-child(even) a {
+  color: coral;
+}
+
+tr:hover {
+  color: deeppink;
+}
+
+table td:empty {
+  height: 17px;
+}
+
+footer {
+  margin-bottom: 40px;
+}
+
+main > section:first-of-type > h2 {
+  margin-left: 40px;
+}
+
+main > section:first-of-type > h2 {
+  margin-left: 40px;
+}
+
+table tr:hover a {
+  color: cornflowerblue;
 }

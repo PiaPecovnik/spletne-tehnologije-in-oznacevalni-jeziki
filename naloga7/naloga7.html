@@ -1,0 +1,385 @@
+<!doctype html>
+
+<html lang="sl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stare grozljivke</title>
+    <link rel="stylesheet" href="stili.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="glavni-naslov">
+        <h1>Najboljše grozljivke prejšnjega stoletja</h1>
+        <nav id="Navigacija">
+          <h2>Navigacija</h2>
+          <ul>
+            <li>
+              Filmi
+              <ol>
+                <li><a href="#jagenjcki">Ko jagenjčki obmolknejo</a></li>
+                <li><a href="#povratka">Brez povratka</a></li>
+                <li><a href="#stvor">Stvor</a></li>
+              </ol>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <h2>Kultne klasike</h2>
+
+          <article id="jagenjcki">
+            <header>
+              <h2>Ko jagenjčki obmolknejo</h2>
+            </header>
+            <div class="vsebina">
+              <p class="vsebinaClanka">
+                Datum izida: <time datetime="1991-02-14">14.februar 1991</time>
+              </p>
+
+              <figure>
+                <img
+                  src="./slike/slika_jagencki.jpg"
+                  alt="Ko jagenjcki obmolknejo"
+                  width="300"
+                />
+                <figcaption>Sl. 1 - Ko jagenjčki obmolknejo</figcaption>
+              </figure>
+
+              <p class="vsebinaClanka">
+                Zgodba spremlja mlado preiskovalko FBI Clarice Starling. Ta
+                prosi genialnega psihiatra in kanibalističnega serijskega
+                morilca dr. Hannibala Lecterja za nasvet glede drugega
+                serijskega morilca znanega kot »Buffalo Bill«, ki svoje žrtve
+                odere.
+              </p>
+
+              <details class="vsebinaClanka">
+                <summary id="odebeljeno">Glavni igralci:</summary>
+                <ul>
+                  <li>Anthony Hopkins</li>
+                  <li>Jodie Foster</li>
+                  <li>Ted Levine</li>
+                  <li>Brooke Smith</li>
+                  <li>Scott Glenn</li>
+                </ul>
+              </details>
+            </div>
+            <footer>
+              <p class="vsebinaClanka"><a href="#Navigacija">Na vrh</a></p>
+            </footer>
+          </article>
+
+          <article id="povratka">
+            <header>
+              <h2>Brez povratka</h2>
+            </header>
+            <div class="vsebina">
+              <p class="vsebinaClanka">
+                Datum izida: <time datetime="2000-03-17">17.marec 2000</time>
+              </p>
+
+              <figure>
+                <img
+                  src="./slike/slika_brezpovratka.jpg"
+                  alt="Brez povratka"
+                  width="300"
+                />
+                <figcaption>Sl. 2 - Brez povratka</figcaption>
+              </figure>
+
+              <p class="vsebinaClanka">
+                Alex je najstnik, ki ima pred vzletom vizijo, da bo letalo
+                eksplodiralo. Skupaj z nekaj sošolci se reši z letala preden to
+                res raznese. Toda Smrt kasneje začne jemati življenja vsem, ki
+                bi na letalu morali umreti.
+              </p>
+
+              <details class="vsebinaClanka">
+                <summary id="odebeljeno">Glavni igralci:</summary>
+                <ul>
+                  <li>Devon Sawa</li>
+                  <li>Ali Later</li>
+                  <li>Tony Todd</li>
+                  <li>Kerr Smith</li>
+                  <li>Seann William Scott</li>
+                </ul>
+              </details>
+            </div>
+            <footer>
+              <p class="vsebinaClanka"><a href="#Navigacija">Na vrh</a></p>
+            </footer>
+          </article>
+
+          <article id="stvor">
+            <header>
+              <h2>Stvor</h2>
+            </header>
+            <div class="vsebina">
+              <p class="vsebinaClanka">
+                Datum izida: <time datetime="1982-06-25">25.junij 1982</time>
+              </p>
+
+              <figure>
+                <img src="./slike/slika_stvor.jpg" alt="Stvor" width="300" />
+                <figcaption>Sl. 3 - Stvor</figcaption>
+              </figure>
+
+              <p class="vsebinaClanka">
+                Pripoveduje zgodbo o skupini ameriških raziskovalcev na
+                Antarktiki. Ti naletijo na "Stvar", nezemeljsko življenjsko
+                obliko, ki asimilira in nato posnema druge organizme.
+              </p>
+
+              <details class="vsebinaClanka">
+                <summary id="odebeljeno">Glavni igralci:</summary>
+                <ul>
+                  <li>Kurt Russell</li>
+                  <li>Wilford Brimley</li>
+                  <li>Keith David</li>
+                  <li>David Clennon</li>
+                  <li>T.K.Carter</li>
+                </ul>
+              </details>
+            </div>
+            <footer>
+              <p class="vsebinaClanka"><a href="#Navigacija">Na vrh</a></p>
+            </footer>
+          </article>
+        </section>
+        <section>
+          <h2>Vnos novega filma</h2>
+
+          <form
+            action="mailto:someone@example.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <fieldset>
+              <legend>Obrazec za vnos</legend>
+
+              <label for="naslov">Vnesi naslov filma*:</label><br />
+              <input
+                type="text"
+                id="naslov"
+                name="naslov"
+                placeholder="Privzeti naslov"
+                size="60"
+                maxlength="30"
+                pattern="[A-Za-zČčŠšŽž ]+"
+                required
+              /><br />
+              <p></p>
+              <br />
+
+              <label for="opis">Kratek opis*:</label><br />
+              <textarea
+                id="opis"
+                name="opis"
+                rows="6"
+                cols="50"
+                required
+              ></textarea
+              ><br /><br />
+
+              <label for="tip">Tip filma*:</label>
+              <select id="tip" name="tip" required>
+                <option value="">--Izberi tip--</option>
+                <option value="grozljivka">Grozljivka</option>
+                <option value="slasher">Slasher</option>
+                <option value="triler">Triler</option>
+                <option value="psihološkiTriler">Psihološki triler</option>
+                <option value="scifi-grozljivka">
+                  SciFi grozljivka
+                </option></select
+              ><br /><br />
+
+              <label for="datum">Datum izida:</label>
+              <input
+                type="date"
+                id="datum"
+                name="datum"
+                min="1950-12-31"
+                max="2010-05-01"
+              /><br /><br />
+
+              <label for="igralec">Glavni igralec/igralka:</label>
+              <input
+                type="text"
+                id="igralec"
+                name="igralec"
+                size="30"
+                list="igralci"
+              />
+              <datalist id="igralci">
+                <option value="Tony Todd"></option>
+                <option value="Rebecca Hall"></option>
+                <option value="Brad Dourif"></option>
+                <option value="Anthony Hopkins"></option>
+                <option value="Kyle Gallner"></option>
+                <option value="Sarah Paulson"></option>
+                <option value="Jake Gyllenhaal"></option></datalist
+              ><br /><br />
+
+              <label for="trajanje">Trajanje filma:</label>
+              <input
+                type="number"
+                id="trajanje"
+                name="trajanje"
+                min="20"
+                max="150"
+                value="60"
+                step="20"
+              /><br /><br />
+
+              <label>Se trenutno predvaja:</label><br />
+              <input type="radio" id="predvaja_da" name="predvaja" value="da" />
+              <label for="predvaja_da">da</label>
+              <input type="radio" id="predvaja_ne" name="predvaja" value="ne" />
+              <label for="predvaja_ne">ne</label><br /><br />
+            </fieldset>
+
+            <br />
+
+            <fieldset>
+              <legend>Filmske nagrade za grozljivke</legend>
+
+              <label for="nominacije">Število nominacij:</label><br />
+              <input
+                type="range"
+                id="nominacije"
+                name="nominacije"
+                min="0"
+                max="20"
+              /><br /><br />
+
+              <label>Prejete nagrade za:</label><br />
+              <input
+                type="checkbox"
+                id="najboljsa_grozljivka"
+                name="nagrade"
+                value="najboljsa_grozljivka"
+              />
+              <label for="najboljsa_grozljivka"
+                >najboljša grozljivka / thriller</label
+              ><br />
+
+              <input
+                type="checkbox"
+                id="najboljsi_zlobnez"
+                name="nagrade"
+                value="najboljsi_zlobnez"
+              />
+              <label for="najboljsi_zlobnez"
+                >najboljši filmski zlobnež / morilec</label
+              ><br />
+
+              <input
+                type="checkbox"
+                id="najboljsi_twist"
+                name="nagrade"
+                value="najboljsi_twist"
+              />
+              <label for="najboljsi_twist">najboljši preobrat zgodbe</label
+              ><br />
+
+              <input
+                type="checkbox"
+                id="najboljsi_scream"
+                name="nagrade"
+                value="najboljsi_scream"
+              />
+              <label for="najboljsi_scream">najboljša scream queen / king</label
+              ><br />
+
+              <input
+                type="checkbox"
+                id="najboljsi_specialni_efekti"
+                name="nagrade"
+                value="najboljsi_specialni_efekti"
+              />
+              <label for="najboljsi_specialni_efekti"
+                >najboljši specialni / vizualni efekti</label
+              ><br />
+            </fieldset>
+
+            <h3>Send e-mail to someone@example.com:</h3>
+
+            Name:<br />
+            <input type="text" name="name" /><br />
+            E-mail:<br />
+            <input type="text" name="mail" /><br />
+            Comment:<br />
+            <input type="text" name="comment" size="50" /><br /><br />
+            <input type="submit" value="Send" />
+            <input type="reset" value="Reset" />
+          </form>
+        </section>
+      </main>
+
+      <aside>
+        <h2>Še nekaj primerov:</h2>
+
+        <table>
+          <tr>
+            <td>
+              <li>
+                <a
+                  href="https://www.rottentomatoes.com/m/1021112-texas_chainsaw_massacre"
+                  >Teksaški pokol z motorko</a
+                >
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li>
+                <a href="https://www.rottentomatoes.com/m/1109257-others"
+                  >Vsiljivci</a
+                >
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li>
+                <a href="https://www.rottentomatoes.com/m/psycho">Psiho</a>
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+      </aside>
+
+      <footer id="glavna-noga">
+        <p>
+          &copy; Copyright 2025 Rotten Tomatoes. Copyright &copy; 2025 Collider.
+        </p>
+      </footer>
+    </div>
+
+    <script src="skripte.js"></script>
+  </body>
+</html>

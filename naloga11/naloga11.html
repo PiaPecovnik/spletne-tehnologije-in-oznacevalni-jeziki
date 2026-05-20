@@ -1,0 +1,369 @@
+<!doctype html>
+
+<html lang="sl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stare grozljivke</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"
+      integrity="sha256-zKbi8I2J5A9/AtXEXqfqZN23Mt1wpVcyEDYCF/PSYKw="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <header id="glavni-naslov" class="col-12">
+          <h1 class="display-1">Najboljše grozljivke prejšnjega stoletja</h1>
+
+          <nav
+            id="Navigacija"
+            class="navbar navbar-expand-lg bg-body-tertiary mb-5"
+            data-bs-theme="dark"
+          >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navigacija</a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel"
+                data-bs-theme="dark"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                    Navigacija
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#jagenjcki"
+                        >Ko jagenjčki obmolknejo</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#povratka">Brez povratka</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#stvor">Stvor</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button type="submit" id="dodaj-film" class="btn btn-primary">
+                Dodaj Novo
+              </button>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <main>
+            <div class="row">
+              <div class="col-sm-6">
+                <section id="Filmi">
+                  <p class="film-dodan-uspeh">Film uspešno dodan</p>
+                </section>
+              </div>
+              <div class="col-sm-6">
+                <section id="nov"></section>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="col-sm-4">
+          <aside>
+            <h2 class="h2">Še nekaj primerov:</h2>
+
+            <table class="table table-dark">
+              <tr>
+                <td>
+                  <li>
+                    <a
+                      href="https://www.rottentomatoes.com/m/1021112-texas_chainsaw_massacre"
+                      >Teksaški pokol z motorko</a
+                    >
+                  </li>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <li>
+                    <a href="https://www.rottentomatoes.com/m/1109257-others"
+                      >Vsiljivci</a
+                    >
+                  </li>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <li>
+                    <a href="https://www.rottentomatoes.com/m/psycho">Psiho</a>
+                    <span class="badge text-bg-secondary">New</span>
+                  </li>
+                </td>
+              </tr>
+            </table>
+          </aside>
+        </div>
+        <div id="vnos-filma" title="Vnos Filma">
+          <p class="film-dodan-napaka"></p>
+          <form id="obrazec" method="post" enctype="text/plain">
+            <h2 class="h2">VNOS NOVEGA FILMA:</h2>
+
+            <fieldset>
+              <legend>Obrazec za vnos</legend>
+              <div class="mb-3">
+                <label for="naslov" class="">Vnesi naslov filma*:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="naslov"
+                  name="naslov"
+                  placeholder="Privzeti naslov"
+                  size="60"
+                  maxlength="30"
+                  pattern="[A-Za-zČčŠšŽž ]+"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="opis" class="form-label">Kratek opis*:</label>
+                <textarea
+                  class="form-control"
+                  id="opis"
+                  name="opis"
+                  rows="4"
+                  cols="50"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- <div class="mb-3">
+                    <label for="tip" class="form-label">Tip filma*:</label>
+                    <select id="tip" name="tip" class="form-control" required>
+                      <option value="">--Izberi tip--</option>
+                      <option value="grozljivka">Grozljivka</option>
+                      <option value="slasher">Slasher</option>
+                      <option value="triler">Triler</option>
+                      <option value="psihološkiTriler">
+                        Psihološki triler
+                      </option>
+                      <option value="scifi-grozljivka">SciFi grozljivka</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="datum" class="form-label">Datum izida:</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="datum"
+                      name="datum"
+                      min="1950-12-31"
+                      max="2010-05-01"
+                    />
+                  </div> -->
+
+              <div class="mb-3">
+                <label for="igralec" class="form-label"
+                  >Glavni igralec/igralka:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="igralec"
+                  name="igralec"
+                  size="30"
+                  list="igralci"
+                />
+                <datalist id="igralci">
+                  <option value="Tony Todd"></option>
+                  <option value="Rebecca Hall"></option>
+                  <option value="Brad Dourif"></option>
+                  <option value="Anthony Hopkins"></option>
+                  <option value="Kyle Gallner"></option>
+                  <option value="Sarah Paulson"></option>
+                  <option value="Jake Gyllenhaal"></option>
+                </datalist>
+              </div>
+
+              <label for="ocena">Ocena filma:</label>
+              <input
+                type="range"
+                id="ocena"
+                name="ocena"
+                min="1"
+                max="10"
+                step="0.5"
+                value="5.5"
+              />
+              <p id="ocena-prikaz">Ocena: 5.5</p>
+              <br /><br />
+
+              <label for="slika">Slika filma</label>
+              <input type="text" id="slika" name="slika" required /><br /><br />
+
+              <div class="mb-3">
+                <label for="trajanje" class="form-label">Trajanje filma:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="trajanje"
+                  name="trajanje"
+                  min="20"
+                  max="150"
+                  value="60"
+                  step="20"
+                />
+              </div>
+
+              <!--  <div class="mb-3">
+                    <label class="form-check-label">Se trenutno predvaja:</label
+                    ><br />
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="predvaja_da"
+                      name="predvaja"
+                      value="da"
+                    />
+                    <label for="predvaja_da" class="form-check-label">da</label>
+                    <br />
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="predvaja_ne"
+                      name="predvaja"
+                      value="ne"
+                    />
+                    <label for="predvaja_ne" class="form-check-label">ne</label>
+                  </div>-->
+            </fieldset>
+
+            <!--<fieldset>
+                  <legend>Filmske nagrade za grozljivke</legend>
+
+                  <label for="nominacije" class="form-check-label"
+                    >Število nominacij:</label
+                  >
+                  <input
+                    type="range"
+                    class="form-input"
+                    id="nominacije"
+                    name="nominacije"
+                    min="0"
+                    max="20"
+                  /><br />
+
+                  <label class="form-check-label">Prejete nagrade za:</label
+                  ><br />
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="najboljsa_grozljivka"
+                    name="nagrade"
+                    value="najboljsa_grozljivka"
+                  />
+                  <label for="najboljsa_grozljivka" class="form-check-label"
+                    >najboljša grozljivka / thriller</label
+                  ><br />
+
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="najboljsi_zlobnez"
+                    name="nagrade"
+                    value="najboljsi_zlobnez"
+                  />
+                  <label for="najboljsi_zlobnez" class="form-check-label"
+                    >najboljši filmski zlobnež / morilec</label
+                  ><br />
+
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="najboljsi_twist"
+                    name="nagrade"
+                    value="najboljsi_twist"
+                  />
+                  <label for="najboljsi_twist" class="form-check-label"
+                    >najboljši preobrat zgodbe</label
+                  ><br />
+
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="najboljsi_scream"
+                    name="nagrade"
+                    value="najboljsi_scream"
+                  />
+                  <label for="najboljsi_scream" class="form-check-label"
+                    >najboljša scream queen / king</label
+                  ><br />
+
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="najboljsi_specialni_efekti"
+                    name="nagrade"
+                    value="najboljsi_specialni_efekti"
+                  />
+                  <label
+                    for="najboljsi_specialni_efekti"
+                    class="form-check-lable"
+                    >najboljši specialni / vizualni efekti</label
+                  ><br />
+                </fieldset>-->
+          </form>
+        </div>
+      </div>
+
+      <footer id="glavna-noga" class="row card text-center">
+        <p class="card-body mt-3">
+          &copy; Copyright 2025 Rotten Tomatoes. Copyright &copy; 2025 Collider.
+        </p>
+      </footer>
+    </div>
+    <script src="skripte.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
